@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.sql.SQLOutput;
 
 public class Result {
 
@@ -20,7 +19,7 @@ public class Result {
                 for (int j = 0; this.arr[i][j].getBackground() == Color.black; j++) {
                     when_win++;
                     if (when_win == arr.length) {
-                        JOptionPane.showMessageDialog(null, "Wygrales czarny!!");
+                        JOptionPane.showMessageDialog(null, "BLACK WON !!");
                         System.out.println("check_rows_black");
                         return true;
                     }
@@ -37,11 +36,11 @@ public class Result {
            int  when_win=0;
             for (int j = 0; this.arr[i][j].getBackground() == Color.white; j++) {
                 when_win++;
-                System.out.println("wynik = "+when_win);
+                System.out.println("score = "+when_win);
                 if (when_win == arr.length) {
-                    JOptionPane.showMessageDialog(null, "Wygrales Bialy!!");
+                    JOptionPane.showMessageDialog(null, "WHITE WON!!");
                     System.out.println("check_rows_white");
-                    System.out.println("wynik"+when_win);
+                    System.out.println("SCORE"+when_win);
                     return true;
                 }
             }
@@ -59,7 +58,7 @@ public class Result {
             for (; this.arr[j][i].getBackground() == Color.black; j++) {
                 when_win++;
                 if (when_win == arr.length) {
-                    JOptionPane.showMessageDialog(null, "Wygrales Czarny!!");
+                    JOptionPane.showMessageDialog(null, "BLACK WON !!");
                     System.out.println("check_col_black");
                     return true;
                 }
@@ -77,7 +76,7 @@ public class Result {
             for (int j = 0; this.arr[j][i].getBackground() == Color.white; j++) {
                 when_win++;
                 if (when_win == arr.length) {
-                    JOptionPane.showMessageDialog(null, "Wygrales bialy!!");
+                    JOptionPane.showMessageDialog(null, "WHITE WON !!");
                     System.out.println("check_col_white");
                     return true;
                 }
@@ -108,7 +107,7 @@ public class Result {
                 j++;
                 when_win++;
                 if (when_win == arr.length) {
-                    JOptionPane.showMessageDialog(null, "Wygrales czarny!!");
+                    JOptionPane.showMessageDialog(null, "BLACK WON !!");
                     System.out.println("check_slant1_black");
                     return true;
                 }
@@ -126,7 +125,7 @@ public class Result {
                 j++;
                 when_win++;
                 if (when_win == arr.length) {
-                    JOptionPane.showMessageDialog(null, "Wygrales bialy!!");
+                    JOptionPane.showMessageDialog(null, "WHITE WON !!");
                     System.out.println("check_slant1_white");
                     return true;
                 }
@@ -140,7 +139,7 @@ public class Result {
         for (int j = 0; this.arr[j][j].getBackground() == Color.black; j++) {
             when_win++;
             if (when_win == arr.length) {
-                JOptionPane.showMessageDialog(null, "Wygrales czarny!!");
+                JOptionPane.showMessageDialog(null, "BLACK WON!!");
                 System.out.println("check_slant2_black");
                 return true;
             }
@@ -153,7 +152,7 @@ public class Result {
         for (int j = 0; this.arr[j][j].getBackground() == Color.white; j++) {
             when_win++;
             if (when_win == arr.length) {
-                JOptionPane.showMessageDialog(null, "Wygrales bialy!!");
+                JOptionPane.showMessageDialog(null, "WHITE WON !!");
                 System.out.println("check_slant2_white");
                 return true;
             }
